@@ -27,7 +27,6 @@ def palabras_que_contienen(lista_palabras, objetivo):
 
 # 4. Genera una función que calcule la diferencia entre los valores de dos listas. Usa la función map().
 def diferencia_listas(lista1, lista2):
-    # Asumimos que ambas listas tienen la misma longitud
     return list(map(lambda x, y: x - y, lista1, lista2))
 
 # 5. Escribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado (por defecto 5).
