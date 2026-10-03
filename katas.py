@@ -333,3 +333,32 @@ def calcular_compra():
             print(f"El cupón no es válido. Precio final: {precio_original}")
     else:
         print(f"No se aplicó descuento. Precio final: {precio_original}")
+
+# Ejemplos de uso
+if __name__ == "__main__":
+    # Kata 34
+    print("--- Kata 34: Árbol ---")
+    mi_arbol = Arbol()
+    mi_arbol.crecer_tronco()
+    mi_arbol.nueva_rama()
+    mi_arbol.crecer_ramas()
+    print(mi_arbol.info_arbol())
+
+    # Kata 35
+    print("\n--- Kata 35: Usuario Banco ---")
+    usuario1 = UsuarioBanco("Alice", 100, "123456789")
+    usuario2 = UsuarioBanco("Bob", 50, "987654321")
+    
+    print(f"Saldo inicial de {usuario1.nombre}: {usuario1.saldo}")
+    print(f"Saldo inicial de {usuario2.nombre}: {usuario2.saldo}")
+    
+    try:
+        print("Transfiriendo 80 de Alice a Bob...")
+        usuario1.transferir_dinero(usuario2, 80)
+        print("Transferencia completada.")
+    except TransaccionError as e:
+        print(f"Error de transacción capturado: {e}")
+        
+    print(f"Saldo final de {usuario1.nombre}: {usuario1.saldo}")
+    print(f"Saldo final de {usuario2.nombre}: {usuario2.saldo}")
+
